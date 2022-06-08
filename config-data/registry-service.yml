@@ -2,6 +2,7 @@ server:
   port: 8099
   error:
     include-message: always
+  waitTimeInMsWhenSyncEmpty: 0
 eurka:
   instance:
     hostname: localhost
