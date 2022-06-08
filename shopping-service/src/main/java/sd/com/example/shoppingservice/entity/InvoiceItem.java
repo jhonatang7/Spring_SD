@@ -1,6 +1,7 @@
 package sd.com.example.shoppingservice.entity;
 
 import lombok.Data;
+import sd.com.example.shoppingservice.model.Product;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
@@ -25,7 +26,8 @@ public class InvoiceItem implements Serializable{
     @Transient
     private Double subTotal;
 
-
+    @Transient
+    private Product product;
     public Double getSubTotal(){
         if (this.price >0  && this.quantity >0 ){
             return this.quantity * this.price;

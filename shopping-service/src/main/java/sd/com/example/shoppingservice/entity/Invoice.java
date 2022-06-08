@@ -2,6 +2,7 @@ package sd.com.example.shoppingservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import sd.com.example.shoppingservice.model.Customer;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -41,7 +42,8 @@ public class Invoice implements Serializable{
     private List<InvoiceItem> items;
 
     private String state;
-
+    @Transient
+    private Customer customer;
     public Invoice(){
         items = new ArrayList<>();
     }

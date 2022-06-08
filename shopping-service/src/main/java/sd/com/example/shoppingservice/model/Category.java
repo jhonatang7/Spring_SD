@@ -1,2 +1,8 @@
-package sd.com.example.shoppingservice.model;public class Category {
+package sd.com.example.shoppingservice.model;
+
+import lombok.Data;
+
+@Data
+public class Category {
+    private Long id;private String name;
 }
